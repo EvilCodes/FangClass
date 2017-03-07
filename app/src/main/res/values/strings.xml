@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">FangClass</string>
+    <string name="app_name">快买酒</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_fragment">首页</string>
+    <string name="category_fragment">分类</string>
+    <string name="cart_fragment">购物车</string>
+    <string name="profile_fragment">我的</string>
 </resources>
