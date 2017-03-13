@@ -1,4 +1,4 @@
-package cn.ucai.blackfox.fangclass.View.activitys;
+package cn.ucai.blackfox.fangclass.controller.activitys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

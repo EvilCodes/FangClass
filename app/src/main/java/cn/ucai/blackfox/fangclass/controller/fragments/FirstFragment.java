@@ -1,4 +1,4 @@
-package cn.ucai.blackfox.fangclass.View.fragments;
+package cn.ucai.blackfox.fangclass.controller.fragments;
 
 
 import android.os.Bundle;

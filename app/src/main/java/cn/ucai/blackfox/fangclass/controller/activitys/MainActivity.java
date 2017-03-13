@@ -1,10 +1,9 @@
-package cn.ucai.blackfox.fangclass.View.activitys;
+package cn.ucai.blackfox.fangclass.controller.activitys;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,10 +11,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import cn.ucai.blackfox.fangclass.R;
-import cn.ucai.blackfox.fangclass.View.fragments.CartFragment;
-import cn.ucai.blackfox.fangclass.View.fragments.CategoryFragment;
-import cn.ucai.blackfox.fangclass.View.fragments.FirstFragment;
-import cn.ucai.blackfox.fangclass.View.fragments.ProfileFragment;
+import cn.ucai.blackfox.fangclass.controller.fragments.CartFragment;
+import cn.ucai.blackfox.fangclass.controller.fragments.CategoryFragment;
+import cn.ucai.blackfox.fangclass.controller.fragments.FirstFragment;
+import cn.ucai.blackfox.fangclass.controller.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView[] textViews;
