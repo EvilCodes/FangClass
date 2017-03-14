@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="flowIndicator">
+        <attr name="count" format="integer" />
+        <attr name="radius" format="integer" />
+        <attr name="distance" format="integer" />
+        <attr name="focus" format="integer" />
+    </declare-styleable>
+</resources>
