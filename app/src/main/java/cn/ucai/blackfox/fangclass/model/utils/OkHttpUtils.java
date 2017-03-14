@@ -1,14 +1,17 @@
 package cn.ucai.blackfox.fangclass.model.utils;
 
 import android.content.Context;
+import android.provider.MediaStore;
 import android.util.Log;
 
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -24,12 +27,14 @@ public class OkHttpUtils<T> {
 
 
     private static final String TAG = OkHttpUtils.class.getSimpleName();
-    URL mUrl;
-    OnCompleteListener mListener;
-    Context mContext;
-    String requestUrl = I.rootUrl;
-    Class<T> mClass;
-    StringBuffer buffer;
+    private URL mUrl;
+    private OnCompleteListener mListener;
+    private Context mContext;
+    private String requestUrl = I.rootUrl;
+    private Class<T> mClass;
+    private StringBuffer buffer;
+    private String requestMethod="GET";
+
 
 
     public OkHttpUtils(Context mContext) {
@@ -58,6 +63,7 @@ public class OkHttpUtils<T> {
 
     /**
      * 添加网络请求的参数
+     *
      * @param params
      * @param values
      * @return
@@ -77,6 +83,12 @@ public class OkHttpUtils<T> {
         return this;
     }
 
+
+    private void setMethod(String method) {
+        this.requestMethod = method;
+
+    }
+
     private void execute(OnCompleteListener listener) {
         mListener = listener;
         setmUrlRequest();
@@ -88,23 +100,37 @@ public class OkHttpUtils<T> {
             mUrl = new URL(requestUrl);
             try {
                 HttpURLConnection connection = (HttpURLConnection) mUrl.openConnection();
+                connection.setConnectTimeout(5000);
+                connection.setReadTimeout(5000);
                 connection.setDoInput(true);
                 connection.setDoOutput(true);
-
-                connection.connect();
-                int responseCode = connection.getResponseCode();
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    InputStream inputStream = connection.getInputStream();
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-                    buffer = new StringBuffer();
-                    String content;
-                    if ((content = reader.readLine()) != null) {
-                        buffer.append(content);
+//                if (requestMethod.equals("POST")) {
+//                    connection.setUseCaches(false);
+//                    connection.setRequestMethod(requestMethod);
+//                    connection.connect();
+//                    OutputStream outputStream = connection.getOutputStream();
+//
+//
+//                } else {
+                    connection.setUseCaches(true);
+                    connection.setRequestMethod(requestMethod);
+                    connection.connect();
+                    int responseCode = connection.getResponseCode();
+                    if (responseCode == HttpURLConnection.HTTP_OK) {
+                        InputStream inputStream = connection.getInputStream();
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+                        buffer = new StringBuffer();
+                        String content;
+                        if ((content = reader.readLine()) != null) {
+                            buffer.append("/n").append(content);
+                        }
+                        mListener.success(buffer.toString());
+                    } else {
+                        mListener.error("网络请求错误");
                     }
-                    mListener.success(buffer.toString());
-                } else {
-                    mListener.error("网络请求错误");
-                }
+
+//                }
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -112,14 +138,16 @@ public class OkHttpUtils<T> {
             e.printStackTrace();
         }
 
-
     }
 
-    public T parseObject(String result,Class<T> tClass) {
+    public T parseObject(String result, Class<T> tClass) {
         mClass = tClass;
         Gson gson = new Gson();
-        return  gson.fromJson(result, mClass);
+        return gson.fromJson(result, mClass);
     }
+
+
+
 
 
 }
