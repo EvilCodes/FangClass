@@ -18,7 +18,8 @@
         <activity android:name=".controller.activitys.MainActivity" />
         <activity android:name=".controller.activitys.ShopDetailsActivity" />
         <activity android:name=".controller.activitys.LoginActivity" />
-        <activity android:name=".controller.activitys.RegisterActivity"></activity>
+        <activity android:name=".controller.activitys.RegisterActivity" />
+        <activity android:name=".controller.activitys.TransformActivity"></activity>
     </application>
 
 </manifest>
