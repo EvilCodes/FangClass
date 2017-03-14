@@ -9,7 +9,7 @@ import cn.ucai.blackfox.fangclass.controller.activitys.LoginActivity;
  * Created by Administrator on 2017/3/14 0014.
  */
 
-public class MGFT {
+public class MFGT {
     public static void jumptoLoginActivity(Activity activity) {
         activity.startActivity(new Intent(activity, LoginActivity.class));
     }
