@@ -15,7 +15,7 @@
     <string name="hint_password">登录密码</string>
     <string name="btn_login">登录</string>
     <string name="text_register">注册</string>
-    <string name="find_password">找回密码</string>
+    <string name="find_password">找回密码?</string>
     <string name="text_wxlogin">合作登录账户</string>
     
 
