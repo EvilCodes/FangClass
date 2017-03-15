@@ -8,11 +8,9 @@ import android.app.Application;
 
 public class FangClassApplication extends Application {
     private static FangClassApplication instance;
-
     private FangClassApplication() {
 
     }
-
     public static FangClassApplication getInstance() {
         if (instance == null) {
             synchronized (FangClassApplication.class) {
