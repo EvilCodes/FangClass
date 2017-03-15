@@ -19,7 +19,9 @@
         <activity android:name=".controller.activitys.ShopDetailsActivity" />
         <activity android:name=".controller.activitys.LoginActivity" />
         <activity android:name=".controller.activitys.RegisterActivity" />
-        <activity android:name=".controller.activitys.TransformActivity"></activity>
+        <activity android:name=".controller.activitys.TransformActivity" />
+        <activity android:name=".controller.activitys.FindPassWordActivity" />
+
     </application>
 
 </manifest>

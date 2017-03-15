@@ -4,6 +4,7 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <EditText
         android:id="@+id/et_tel"
         android:layout_width="match_parent"
@@ -38,6 +39,7 @@
         android:layout_margin="10dp"
         android:text="@string/text_register"
         android:textColor="#FF1493" />
+
     <TextView
         android:id="@+id/tv_find_password"
         android:layout_width="wrap_content"
@@ -47,6 +49,7 @@
         android:layout_margin="10dp"
         android:text="@string/find_password"
         android:textColor="#000" />
+
     <LinearLayout
         android:id="@+id/show_wxlogin"
         android:layout_width="match_parent"
@@ -55,25 +58,27 @@
         android:layout_marginTop="85dp"
         android:gravity="center"
         android:orientation="horizontal">
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"
-            android:background="#C4C4C4"
-            />
+            android:background="#C4C4C4" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/text_wxlogin" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"
-            android:background="#C4C4C4"
-            />
+            android:background="#C4C4C4" />
 
     </LinearLayout>
+
     <ImageView
         android:id="@+id/iv_wxlogin"
         android:layout_width="80dp"

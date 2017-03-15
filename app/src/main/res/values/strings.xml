@@ -17,7 +17,7 @@
     <string name="text_register">注册</string>
     <string name="find_password">找回密码?</string>
     <string name="text_wxlogin">合作登录账户</string>
-    
+
 
     <!--注册用到的字符  -->
     <string name="register_hint_tel" >请输入注册手机号</string>
@@ -26,10 +26,14 @@
     <string name="left_text01">已有账户？</string>
     <string name="left_text02">请登录</string>
 
-    
+
     <!-- 找回密码-->
     <string name="find_hint_tel">请输入绑定的手机号</string>
     <string name="find_hint_recognizecode">图形验证码，点击图片即可刷新</string>
     <string name="fint_left_text">系统会发送短信验证码到您的手机</string>
+    <string name="title_find_password">找回密码</string>
+    <string name="get_recognized_code">获取验证码</string>
+
+    <!-- -->
 
 </resources>

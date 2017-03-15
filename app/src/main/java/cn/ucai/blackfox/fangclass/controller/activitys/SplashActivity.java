@@ -37,4 +37,10 @@ public class SplashActivity extends AppCompatActivity {
 //            overridePendingTransition();
         }
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+    }
 }
