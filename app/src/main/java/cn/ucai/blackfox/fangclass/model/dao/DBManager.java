@@ -22,6 +22,7 @@ public class DBManager {
         dbOpenHelper = DBOpenHelper.getInstance(context);
     }
 
+
     private static DBManager instance;
 
     public static DBManager getInstance() {
@@ -37,7 +38,10 @@ public class DBManager {
 
 
     public boolean saveUser(User user) {
-        SQLiteDatabase db = dbOpenHelper.getWritableDatabase();
+        SQLiteDatabase db = null;
+        if (dbOpenHelper != null) {
+            db = dbOpenHelper.getWritableDatabase();
+        }
         if (db.isOpen()) {
             ContentValues values = new ContentValues();
             values.put(UserDao.USER_COLUMN_NAME, user.getMuserName());
@@ -51,7 +55,6 @@ public class DBManager {
         }
         return false;
     }
-
     public User getUser(String username) {
         SQLiteDatabase db = dbOpenHelper.getReadableDatabase();
         String sql = "SELECT*FROM" + UserDao.USER_TABLE_NAME +
