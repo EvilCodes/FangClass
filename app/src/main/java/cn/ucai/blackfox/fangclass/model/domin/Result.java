@@ -1,10 +1,13 @@
 package cn.ucai.blackfox.fangclass.model.domin;
 
+import java.io.Serializable;
+import java.util.Objects;
+
 /**
  * Created by Administrator on 2017/3/13 0013.
  */
 
-public class Result {
+public class Result implements Serializable{
 
 
     /**
@@ -15,7 +18,7 @@ public class Result {
 
     private int retCode;
     private boolean retMsg;
-    private User retData;
+    private Object retData;
 
     public int getRetCode() {
         return retCode;
@@ -33,7 +36,7 @@ public class Result {
         this.retMsg = retMsg;
     }
 
-    public User getRetData() {
+    public Object getRetData() {
         return retData;
     }
 
