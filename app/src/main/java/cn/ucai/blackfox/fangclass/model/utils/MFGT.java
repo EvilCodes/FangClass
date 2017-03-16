@@ -8,6 +8,7 @@ import android.view.View;
 import cn.ucai.blackfox.fangclass.R;
 import cn.ucai.blackfox.fangclass.controller.activitys.FindPassWordActivity;
 import cn.ucai.blackfox.fangclass.controller.activitys.LoginActivity;
+import cn.ucai.blackfox.fangclass.controller.activitys.MainActivity;
 import cn.ucai.blackfox.fangclass.controller.activitys.RegisterActivity;
 
 /**
@@ -33,6 +34,11 @@ public class MFGT {
                 activity.finish();
             }
         });
+    }
+
+    public static void jumptoMainActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, MainActivity.class));
+
 
     }
 }
