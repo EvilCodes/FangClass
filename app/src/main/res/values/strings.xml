@@ -12,6 +12,7 @@
 
     <!--登录以用到的字符 -->
     <string name="hint_tel">手机号</string>
+    <string name="hint_username">用户名</string>
     <string name="hint_password">登录密码</string>
     <string name="btn_login">登录</string>
     <string name="text_register">注册</string>
