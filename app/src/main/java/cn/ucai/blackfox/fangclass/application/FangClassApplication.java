@@ -2,6 +2,8 @@ package cn.ucai.blackfox.fangclass.application;
 
 import android.app.Application;
 
+import cn.ucai.blackfox.fangclass.model.domin.User;
+
 /**
  * Created by Administrator on 2017/3/13 0013.
  */
@@ -35,8 +37,13 @@ public class FangClassApplication extends Application {
         return instance;
     }
 
+    private User user;
 
+    public User getUser() {
+        return user;
+    }
 
-
-
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
