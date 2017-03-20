@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 
 import cn.ucai.blackfox.fangclass.R;
+import cn.ucai.blackfox.fangclass.application.FangClassApplication;
 import cn.ucai.blackfox.fangclass.application.I;
 import cn.ucai.blackfox.fangclass.model.dao.UserDao;
 import cn.ucai.blackfox.fangclass.model.domin.Result;
@@ -76,6 +77,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 Log.e(TAG, "user=" + user);
                                 UserDao userDao = UserDao.getInstance();
                                 userDao.saveUser(user);
+                                FangClassApplication.getInstance().setUser(user);
                                 MFGT.jumptoMainActivity(LoginActivity.this);
                                 finish();
                             }
