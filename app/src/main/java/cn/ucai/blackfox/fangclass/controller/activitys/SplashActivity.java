@@ -7,6 +7,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import cn.ucai.blackfox.fangclass.R;
+import cn.ucai.blackfox.fangclass.application.FangClassApplication;
 import cn.ucai.blackfox.fangclass.model.utils.MFGT;
 
 public class SplashActivity extends AppCompatActivity {
@@ -32,6 +33,10 @@ public class SplashActivity extends AppCompatActivity {
 
         @Override
         public void run() {
+            if (FangClassApplication.getInstance().getUser() != null) {
+                MFGT.jumptoMainActivity(SplashActivity.this);
+             return;
+            }
             MFGT.jumptoLoginActivity(SplashActivity.this);
 //            添加跳转动画
 //            overridePendingTransition();
