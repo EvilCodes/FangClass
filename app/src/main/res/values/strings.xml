@@ -40,5 +40,7 @@
     <!--用户协议相关-->
     <string name="agree_login">登录即表示同意</string>
     <string name="user_deal">《快买酒用户协议》</string>
+    <string name="tel_title">+86</string>
+    <string name="recognized_code">验证码</string>
 
 </resources>

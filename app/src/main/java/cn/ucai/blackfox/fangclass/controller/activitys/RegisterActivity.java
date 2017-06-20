@@ -10,7 +10,7 @@ import cn.ucai.blackfox.fangclass.R;
 import cn.ucai.blackfox.fangclass.model.utils.MFGT;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
-    ImageView ivCancle;
+//    ImageView ivCancle;
     TextView tvPleaseLogin;
 
     @Override
@@ -23,19 +23,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private void setListener() {
 
-        ivCancle.setOnClickListener(this);
+//        ivCancle.setOnClickListener(this);
         tvPleaseLogin.setOnClickListener(this);
     }
 
     private void initView() {
-        ivCancle = (ImageView) findViewById(R.id.iv_cancle);
         tvPleaseLogin = (TextView) findViewById(R.id.please_login);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.iv_cancle:
             case R.id.please_login:
                 finish();
                 break;
