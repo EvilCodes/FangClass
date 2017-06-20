@@ -12,12 +12,12 @@
 
     <!--登录以用到的字符 -->
     <string name="hint_tel">手机号</string>
-    <string name="hint_username">用户名</string>
-    <string name="hint_password">登录密码</string>
+    <string name="hint_username">请输入手机号</string>
+    <string name="hint_password">请输入密码</string>
     <string name="btn_login">登录</string>
     <string name="text_register">注册</string>
-    <string name="find_password">找回密码?</string>
-    <string name="text_wxlogin">合作登录账户</string>
+    <string name="find_password">忘记密码?</string>
+    <string name="text_wxlogin">第三方等录</string>
 
 
     <!--注册用到的字符  -->
@@ -35,6 +35,10 @@
     <string name="title_find_password">找回密码</string>
     <string name="get_recognized_code">获取验证码</string>
 
-    <!-- -->
+
+
+    <!--用户协议相关-->
+    <string name="agree_login">登录即表示同意</string>
+    <string name="user_deal">《快买酒用户协议》</string>
 
 </resources>
